@@ -49,12 +49,14 @@ run();
 // Tiny TFJS train / predict example.
 async function run() {
   
-  model = await tf.loadModel('XOR/web_model/model.json')
-  y = model.predict(tf.zeros([1,2])) 
-  document.getElementById('out').innerHTML = y.dataSync()[0]
-  /*
-   document.getElementById('micro-out-div').innerText =
+  model = await tf.loadModel('./XOR/web_model/model.json')
+  document.getElementById('micro-out-div').innerText =
       model.predict(tf.zeros([1,2])).dataSync()[0];
+  /*
+   y = model.predict(tf.zeros([1,2])) 
+  document.getElementById('out').innerHTML = y.dataSync()[0]
+  
+   
 */
   
 }
