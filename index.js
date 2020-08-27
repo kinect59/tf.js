@@ -50,7 +50,7 @@ run();
 // Tiny TFJS train / predict example.
 async function run() {
   
-  model = await tf.loadModel('./XOR/web_model/model.json')
+  model = await tf.loadLayersModel('./XOR/web_model/model.json')
   document.getElementById('micro-out-div').innerText =
       model.predict(tf.zeros([1,2])).dataSync();
   /*
