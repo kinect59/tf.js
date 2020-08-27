@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ==============================================================================
- */
+
 
 // This tiny example illustrates how little code is necessary build /
 // train / predict from a model in TensorFlow.js.  Edit this code
@@ -40,6 +40,24 @@ async function run() {
   // Should print approximately 39.
   document.getElementById('micro-out-div').innerText =
       model.predict(tf.tensor2d([20], [1, 1])).dataSync();
+}
+
+run();
+
+ */
+
+
+
+// Tiny TFJS train / predict example.
+async function run() {
+  
+  model = await tf.loadModel('./XOR/web_model/model.json')
+  y = model.predict(tf.zeros([1,2])) 
+   document.getElementById('micro-out-div').innerText =
+      model.predict(tf.zeros([1,2])).dataSync();
+  
+ /* document.getElementById('out').innerHTML = y.dataSync()[0] */
+  
 }
 
 run();
