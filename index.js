@@ -51,7 +51,7 @@ async function run() {
   
   model = await tf.loadModel('./XOR/web_model/model.json')
   document.getElementById('micro-out-div').innerText =
-      model.predict(tf.zeros([1,2])).dataSync()[0];
+      model.predict(tf.zeros([1,2])).dataSync();
   /*
    y = model.predict(tf.zeros([1,2])) 
   document.getElementById('out').innerHTML = y.dataSync()[0]
