@@ -50,7 +50,7 @@ run();
 // Tiny TFJS train / predict example.
 async function run() {
  
-  model = await tf.loadLayersModel('https://github.com/kinect59/tf.js/tree/master/XOR/web_model.json')
+  model = await tf.loadLayersModel('XOR/web_model/model.json')
   /*const model = await tf.loadModel('./XOR/web_model/model.json', {
 	load: myCustomLoadFunc, // what is the required signature for myCustomLoadFunc?
 });*/
